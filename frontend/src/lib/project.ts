@@ -1,0 +1,20 @@
+export const project = {
+  name: "AgriStack Pool",
+  oldName: "Agricultural Input Pooling Cooperative",
+  slug: "agristack-pool",
+  track: "Track 2 Financial Inclusion & Everyday Payments",
+  oneLine: "A farmer input-pooling escrow for seed, fertilizer, and shared purchase orders with transparent cooperative settlement.",
+  users: "small farmers, input suppliers, and agricultural cooperatives",
+  approach: "Bulk-input cooperative escrow",
+  integration: "Soroswap is documented as the future swap path when cooperatives need to convert XLM into USDC or supplier-preferred assets.",
+  contractId: process.env.NEXT_PUBLIC_CONTRACT_ID || "CBZDDYAJU3A3ULMGSPWS4B7SQH2K7LEYW735H5O4AM3TTKYNXRJP2KF2",
+  rpcUrl: process.env.NEXT_PUBLIC_SOROBAN_RPC || "https://soroban-testnet.stellar.org",
+  horizonUrl: process.env.NEXT_PUBLIC_HORIZON_URL || "https://horizon-testnet.stellar.org",
+  network: "testnet",
+  functions: {
+    create: "open_input_pool",
+    fund: "contribute_input_fund",
+    attest: "confirm_supplier_ready",
+    release: "release_supplier_payment",
+  },
+};
